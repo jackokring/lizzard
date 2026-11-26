@@ -32,7 +32,7 @@ project functional goal, and so here's a plan list.
 - [ ] JS (or WASM) for `v`'s backend to make worker for frontend
   - `v -o <*>.js <*>.v` for native JS output, `v -o <*>.c <*>.v` for `C` output
   - `emcc` from package `emscripten` for the WASM (and loading JS) from `C`
-  - Bun hack `sudo ln -s $(which bun /usr/bin/npm` (leaves node offline)
+  - Bun hack `sudo ln -s $(which bun) /usr/bin/npm` (leaves node offline)
   might need adding in some global or local `bun` (npm) packages
 - [ ] TUI monitor of backend
 - [ ] Optional GUI monitor of backend or local dev server
@@ -42,8 +42,9 @@ project functional goal, and so here's a plan list.
 - [ ] Use `.vsh` for script files
   - [ ] Use `just` embedding or includes `#!` recipes
   - [ ] Maybe even `luajit` and `luarocks install sh` scripting
-- [ ] Embed `lua` backend for some processes
+- [ ] Embed `lua` backend for some uses
 - [ ] `just` launch security verify by `: auth_task` before any RPC
+  - [ ] No wildcard eval of CLI command lines ever
 
 ## All Done List
 
