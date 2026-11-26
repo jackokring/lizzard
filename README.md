@@ -32,15 +32,18 @@ project functional goal, and so here's a plan list.
 - [ ] JS (or WASM) for `v`'s backend to make worker for frontend
   - `v -o <*>.js <*>.v` for native JS output, `v -o <*>.c <*>.v` for `C` output
   - `emcc` from package `emscripten` for the WASM (and loading JS) from `C`
-  - Bun hack `sudo ln -s $(which bun) /usr/bin/npm` (leaves node offline)
-  might need adding in some global or local `bun` (npm) packages
+  when `emcc` is available
+  - Bun hack `sudo ln -s $(which bun) /usr/bin/npm` (leaves node offline).
+  It might need adding in some global or local `bun` (npm) packages
 - [ ] TUI monitor of backend
 - [ ] Optional GUI monitor of backend or local dev server
 - [ ] Look into `vab` Android front end option
-  - Seems an install and a new key store key for signing
+  - Seems an install and a new key store key for signing required
 - [ ] Other `C` based platform frontends option (ANSI)
 - [ ] Use `.vsh` for script files
   - [ ] Use `just` embedding or includes `#!` recipes
+  - [X] Avoid `lua` mixing by apt package `liblua5.1-0-dev` fixing `luarocks`
+  config and use `--local` luarocks installs
   - [ ] Maybe even `luajit` and `luarocks install sh` scripting
 - [ ] Embed `lua` backend for some uses
 - [ ] `just` launch security verify by `: auth_task` before any RPC
