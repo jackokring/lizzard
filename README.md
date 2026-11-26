@@ -67,6 +67,10 @@ size control middleware
 - [ ] `spec := veb.openapi_json[App, Context](app, 'API', '1.0.0')!` for
 creating an OpenAPI specification file. Maybe with authentication
 - [ ] Set cookie `secure` to `true` and use HTTPS. Make SSL key
+- [ ] `app.use(veb.secure_headers[Context]())` for security
+- [ ] `app.enable_static_compression = true` for compression.
+  - `app.static_compression_mime_types = [veb.mime_types['.less'], ...]` for
+  all the types that should be compressed
 
 ## All Done List
 
