@@ -64,6 +64,9 @@ size control middleware
 `Accept: text/markdown` header on requests
   - `<div hx-get="/url" hx-headers='{"Accept": "text/Markdown"}'></div>`
   to allow ajax markdown. Then inflate frontend client side
+- [ ] `spec := veb.openapi_json[App, Context](app, 'API', '1.0.0')!` for
+creating an OpenAPI specification file. Maybe with authentication
+- [ ] Set cookie `secure` to `true` and use HTTPS. Make SSL key
 
 ## All Done List
 
