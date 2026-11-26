@@ -28,6 +28,7 @@ fn main() {
 	mut app := &App{}
 	app.static_mime_types['.less'] = 'text/css'
 	app.handle_static('assets', false)!
+	// serve PWA
 	app.serve_static('/worker.js', 'pwa/worker.js')!
 	veb.run[App, Context](mut app, 8080)
 }

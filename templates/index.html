@@ -5,9 +5,13 @@
 	<meta name='viewport' content='width=device-width, initial-scale=1.0'>
 	<title>@title</title>
 	<link rel='stylesheet/less' type='text/css' href='/assets/main.less'>
+	<link rel='stylesheet/css' type='text/css' href='/assets/bootstrap.min.css'>
 	<script src='/assets/less.js'></script>
 	<script src='/assets/htmx.min.js'></script>
+	<script src='/assets/marked.umd.js'></script>
+	<script src='/assets/bootstrap.bundle.min.js'></script>
 	<script>
+    // serve PWA worker
 		if ('serviceWorker' in navigator) {
 			navigator.serviceWorker.register('/worker.js')
 		}
