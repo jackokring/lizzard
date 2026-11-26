@@ -32,6 +32,7 @@ that they have little understanding of a massive context ...
 - [ ] `@include <file_no_ext>` for nested template (also `@js` and `@css`)
   - `@@` for a literal `@`
 - [ ] Pre-compiled minified `bootstrap` 5
+- [ ] Pre compiled minified `htmx.min.js`
 - [ ] Pre-compiled minified `marked.umd.js` for markdown expanding
 - [ ] JS (or WASM) for `v`'s backend to make worker for frontend
   - `v -o <*>.js <*>.v` for native JS output, `v -o <*>.c <*>.v` for `C` output
