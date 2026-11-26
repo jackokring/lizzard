@@ -29,11 +29,16 @@ project functional goal, and so here's a plan list.
 - [ ] Render markdown to HTML for some resources
 - [ ] `@include <file_no_ext>` for nested template (also `@js` and `@css`)
 - [ ] Pre-compiled minified bootstrap 5
-- [ ] JS or WASM for `v`'s backend to make worker for frontend
+- [ ] JS (or WASM) for `v`'s backend to make worker for frontend
+  - `v -o <*>.js <*>.v` for native JS output, `v -o <*>.c <*>.v` for `C` output
+  - `emcc` from package `emscripten` for the WASM (and loading JS) from `C`
+  - Bun hack `sudo ln -s $(which bun /usr/bin/npm` (leaves node offline)
+  might need adding in some global or local `bun` (npm) packages
 - [ ] TUI monitor of backend
 - [ ] Optional GUI monitor of backend or local dev server
 - [ ] Look into `vab` Android front end option
-- [ ] Other `C` based platform frontends option
+  - Seems an install and a new key store key for signing
+- [ ] Other `C` based platform frontends option (ANSI)
 - [ ] Use `.vsh` for script files
   - [ ] Use `just` embedding or includes `#!` recipes
   - [ ] Maybe even `luajit` and `luarocks install sh` scripting
