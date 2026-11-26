@@ -26,6 +26,7 @@ that they have little understanding of a massive context ...
 - [ ] Must not involve any restricted class of user via authentication (18+)
   - [ ] Not that it's 18+ in nature, just 18+ to enjoy
 - [ ] Avoid large data uploads
+- [ ] Avoid anything requiring customer service for as-is software
 
 ## TODO List
 
@@ -40,8 +41,9 @@ that they have little understanding of a massive context ...
   when `emcc` is available
   - Bun hack `sudo ln -s $(which bun) /usr/bin/npm` (leaves `node` offline).
   It might need adding in some global or local `bun` (npm) packages
-- [ ] TUI monitor of backend
+- [ ] TUI monitor of backend using `term` and `term.ui`
 - [ ] Optional GUI monitor of backend or local dev server
+  - Use `ui` as `gui` and `ui2` not pure `v` and smallest
 - [ ] Look into `vab` Android front end option
   - Seems an install and a new key store key for signing required
 - [ ] Other `C` based platform frontends option (ANSI)
@@ -71,6 +73,8 @@ creating an OpenAPI specification file. Maybe with authentication
 - [ ] `app.enable_static_compression = true` for compression.
   - `app.static_compression_mime_types = [veb.mime_types['.less'], ...]` for
   all the types that should be compressed
+  - For dynamic routes for some efficiency `app.use(veb.encode_auto[Context]())`
+- [ ] `favorite.ico`, `robots.txt`, `sitemap.xml` (maybe using sitemap indexes)
 
 ## All Done List
 
