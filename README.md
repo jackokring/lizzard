@@ -29,11 +29,10 @@ that they have little understanding of a massive context ...
 
 ## TODO List
 
-- [ ] Render markdown to HTML for some resources (needs outer tag and CSS)
-  - Middleware is fun. All the best sites use it
 - [ ] `@include <file_no_ext>` for nested template (also `@js` and `@css`)
   - `@@` for a literal `@`
-- [ ] Pre-compiled minified bootstrap 5
+- [ ] Pre-compiled minified `bootstrap` 5
+- [ ] Pre-compiled minified `marked.umd.js` for markdown expanding
 - [ ] JS (or WASM) for `v`'s backend to make worker for frontend
   - `v -o <*>.js <*>.v` for native JS output, `v -o <*>.c <*>.v` for `C` output
   - `emcc` from package `emscripten` for the WASM (and loading JS) from `C`
@@ -59,7 +58,11 @@ that they have little understanding of a massive context ...
 - [ ] Logging of requests `access_log` and `stamp`/`finish`
 - [ ] `app.route_use('/route', veb.body_limit[Context](size))` for max requests
 size control middleware
-- [ ] `@['/:path...'; get; post; host: 'eg.com']` route decorators with arg
+- [ ] `@['/:path...'; get; post; host: 'eg.com']` route decorators with args
+- [ ] `app.enable_markdown_negotiation = true` for client markdown via
+`Accept: text/markdown` header on requests
+  - `<div hx-get="/url" hx-headers='{"Accept": "text/Markdown"}'></div>`
+  to allow ajax markdown. Then inflate frontend client side
 
 ## All Done List
 
