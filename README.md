@@ -25,6 +25,7 @@ that they have little understanding of a massive context ...
 - [ ] Must not be something of a clone of something there is much of
 - [ ] Must not involve any restricted class of user via authentication (18+)
   - [ ] Not that it's 18+ in nature, just 18+ to enjoy
+- [ ] Avoid large data uploads
 
 ## TODO List
 
@@ -54,6 +55,11 @@ that they have little understanding of a massive context ...
 - [ ] Embed `lua` backend for some uses
 - [ ] `just` launch security verify by `: auth_task` before any RPC
   - [ ] No wildcard or eval of CLI command lines EVER (generic RPC bad)
+  - [ ] Some version bump automation for some `just` tasks
+- [ ] Logging of requests `access_log` and `stamp`/`finish`
+- [ ] `app.route_use('/route', veb.body_limit[Context](size))` for max requests
+size control middleware
+- [ ] `@['/:path...'; get; post; host: 'eg.com']` route decorators with arg
 
 ## All Done List
 
