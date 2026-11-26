@@ -1,0 +1,24 @@
+<!doctype html>
+<html lang='en'>
+<head>
+	<meta charset='UTF-8'>
+	<meta name='viewport' content='width=device-width, initial-scale=1.0'>
+	<title>@title</title>
+	<link rel='stylesheet/less' type='text/css' href='/assets/main.less'>
+	<script src='/assets/less.js'></script>
+	<script src='/assets/htmx.min.js'></script>
+	<script>
+		if ('serviceWorker' in navigator) {
+			navigator.serviceWorker.register('/worker.js')
+		}
+	</script>
+</head>
+<body>
+	<main class='card'>
+		<p class='eyebrow'>veb starter</p>
+		<h1>@title</h1>
+		<p>@message</p>
+		<p class='hint'>Try <code>GET /api</code> for a plain-text response.</p>
+	</main>
+</body>
+</html>
